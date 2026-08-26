@@ -48,7 +48,7 @@ export default function Invite() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className={`${greatVibes.className} text-6xl sm:text-8xl md:text-9xl text-purple-900 drop-shadow-lg leading-tight`}
+          className={`${greatVibes.className} text-5xl sm:text-7xl md:text-8xl text-purple-900 drop-shadow-lg leading-tight`}
         >
           Dineshkumar C
         </motion.h1>
@@ -57,7 +57,7 @@ export default function Invite() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className={`${greatVibes.className} text-5xl sm:text-7xl md:text-8xl text-purple-900 drop-shadow-lg leading-tight`}
+          className={`${greatVibes.className} text-3xl sm:text-5xl md:text-6xl text-purple-900 drop-shadow-lg leading-tight`}
         >
           ་༘࿐ ִֶָ💍࿐་༘
         </motion.h2>
@@ -66,7 +66,7 @@ export default function Invite() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className={`${greatVibes.className} text-6xl sm:text-8xl md:text-9xl text-purple-900 drop-shadow-lg leading-tight`}
+          className={`${greatVibes.className} text-5xl sm:text-7xl md:text-8xl text-purple-900 drop-shadow-lg leading-tight`}
         >
           Pooja R
         </motion.h3>

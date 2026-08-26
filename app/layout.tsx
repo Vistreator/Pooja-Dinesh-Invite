@@ -33,15 +33,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </audio>
 
         {/* Play/Pause Button */}
-        <button
-          onClick={toggleMusic}
-          className={`fixed bottom-6 left-1/2 -translate-x-1/2 
-                      sm:bottom-6 sm:right-6 sm:left-auto sm:translate-x-0
-                      px-4 py-2 text-sm font-semibold text-white rounded-full shadow-lg 
-                      transition-transform duration-300 hover:scale-105 z-50
-                      ${isPlaying ? "bg-purple-700 ring-2 ring-purple-400 animate-wiggle" : "bg-purple-500 ring-2 ring-purple-300"}`}
-        >
-          {isPlaying ? "⏸" : "Play ♫"}
+        {/* Play/Pause Button */}
+<button
+  onClick={toggleMusic}
+  className={`fixed bottom-6 left-1/2 -translate-x-1/2
+              px-4 py-2 text-sm font-semibold text-white rounded-full shadow-lg 
+              transition-transform duration-300 hover:scale-105 z-50
+              ${isPlaying ? "bg-purple-700 ring-2 ring-purple-400 animate-wiggle" : "bg-purple-500 ring-2 ring-purple-300"}`}
+>
+  {isPlaying ? "⏸" : "Play ♫"}
+
         </button>
 
         {/* Page Content */}
