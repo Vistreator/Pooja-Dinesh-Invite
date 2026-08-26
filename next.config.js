@@ -2,7 +2,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    // ✅ This skips type errors during build
+    // ✅ Skip type errors during build
     ignoreBuildErrors: true,
   },
 };
