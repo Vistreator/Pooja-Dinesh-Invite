@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       transition-transform duration-300 hover:scale-105 z-50
                       ${isPlaying ? "bg-purple-700 ring-2 ring-purple-400 animate-wiggle" : "bg-purple-500 ring-2 ring-purple-300"}`}
         >
-          {isPlaying ? "⏸" : "▶"}
+          {isPlaying ? "⏸" : "Play ♫"}
         </button>
 
         {/* Page Content */}
