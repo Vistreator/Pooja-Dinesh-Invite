@@ -50,7 +50,7 @@ export default function Invite() {
           transition={{ duration: 1 }}
           className={`${greatVibes.className} text-5xl sm:text-7xl md:text-8xl text-purple-900 drop-shadow-lg leading-tight`}
         >
-          Dineshkumar C
+          Dineshkumar
         </motion.h1>
 
         <motion.h2
@@ -68,7 +68,7 @@ export default function Invite() {
           transition={{ duration: 1, delay: 0.6 }}
           className={`${greatVibes.className} text-5xl sm:text-7xl md:text-8xl text-purple-900 drop-shadow-lg leading-tight`}
         >
-          Pooja R
+          Pooja
         </motion.h3>
 
         {/* Divider hearts */}

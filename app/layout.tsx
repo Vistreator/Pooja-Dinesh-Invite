@@ -34,16 +34,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Play/Pause Button */}
         {/* Play/Pause Button */}
+{/* Play/Pause Button */}
+<div className="flex justify-center mt-8 mb-6">
+  {/* Play/Pause Button */}
 <button
   onClick={toggleMusic}
-  className={`fixed bottom-6 left-1/2 -translate-x-1/2
+  className={`fixed top-1/2 right-6 -translate-y-1/2
               px-4 py-2 text-sm font-semibold text-white rounded-full shadow-lg 
               transition-transform duration-300 hover:scale-105 z-50
-              ${isPlaying ? "bg-purple-700 ring-2 ring-purple-400 animate-wiggle" : "bg-purple-500 ring-2 ring-purple-300"}`}
+              ${isPlaying ? "bg-purple-700 ring-2 ring-purple-400 animate-wiggle" 
+                          : "bg-purple-500 ring-2 ring-purple-300"}`}
 >
   {isPlaying ? "⏸" : "Play ♫"}
+</button>
 
-        </button>
+</div>
+
 
         {/* Page Content */}
         <main className="flex-1 w-full px-4 sm:px-6 py-4">{children}</main>
