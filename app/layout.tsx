@@ -41,15 +41,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   onClick={toggleMusic}
   className={`fixed top-3/4 right-6
               w-9 h-9 flex items-center justify-center rounded-full shadow-md 
-              transition-transform duration-300 hover:scale-125 z-50
+              transition-transform duration-300 z-50
               bg-purple-900 text-purple-200
-              ${isPlaying ? "animate-spin-slow" : ""}`}
+              ${isPlaying ? "animate-spin-slow animate-blow-shrink" : ""}`}
 >
-  {isPlaying ? "♫" : "♫"}
+  {isPlaying ? "🎵" : "🎵"}
 </button>
-
-
-
 
 
         {/* Page Content */}

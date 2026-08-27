@@ -77,7 +77,7 @@ export default function Invite() {
           transition={{ duration: 1, delay: 0.3 }}
           className={`${greatVibes.className} text-3xl sm:text-5xl md:text-6xl text-purple-900 drop-shadow-lg leading-tight`}
         >
-          ་༘࿐ ִֶָ💍࿐་༘
+          . ݁˖ .⋆ ݁｡˚⋆  💍  ⋆˚｡⋆. ݁˖ .
         </motion.h2>
 
         <motion.h3
