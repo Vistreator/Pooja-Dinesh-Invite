@@ -32,6 +32,23 @@
   border-radius: 50%;
   animation: glitter 2s infinite ease-in-out;
   }
+  @keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 6px #a855f7, 0 0 12px #d8b4fe; }
+  50% { box-shadow: 0 0 12px #9333ea, 0 0 24px #c084fc; }
+}
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+
 
 }
 

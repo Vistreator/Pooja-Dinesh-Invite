@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false); // start paused
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const toggleMusic = async () => {
     if (!audioRef.current) return;
@@ -13,8 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         audioRef.current.pause();
         setIsPlaying(false);
       } else {
-        audioRef.current.muted = false; // unmute once user clicks
-        await audioRef.current.play();  // browsers require user interaction
+        audioRef.current.muted = false;
+        await audioRef.current.play();
         setIsPlaying(true);
       }
     } catch (err) {
@@ -32,18 +32,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Your browser does not support the audio element.
         </audio>
 
-        {/* Play/Pause Button */}
-        <button
+        {/* Rotating Round Button */}
+        {/* Rotating Round Button */}
+{/* Rotating Round Button */}
+{/* Rotating Round Button */}
+{/* Rotating Round Button */}
+<button
   onClick={toggleMusic}
-  className={`fixed bottom-6 left-1/2 -translate-x-1/2
-              px-4 py-2 text-sm font-semibold text-white rounded-full shadow-lg 
-              transition-transform duration-300 hover:scale-110 z-50
-              animate-bounce animate-pulse
-              ${isPlaying ? "bg-purple-700 ring-4 ring-purple-400" 
-                          : "bg-purple-500 ring-4 ring-purple-300"}`}
+  className={`fixed top-3/4 right-6
+              w-9 h-9 flex items-center justify-center rounded-full shadow-md 
+              transition-transform duration-300 hover:scale-125 z-50
+              bg-purple-900 text-purple-200
+              ${isPlaying ? "animate-spin-slow" : ""}`}
 >
-  {isPlaying ? "⏸" : "Play ♫"}
+  {isPlaying ? "♫" : "♫"}
 </button>
+
+
+
 
 
         {/* Page Content */}
