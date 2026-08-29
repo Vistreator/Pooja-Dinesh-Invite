@@ -13,16 +13,59 @@ export default function Home() {
   const router = useRouter();
 
   const handleClick = () => {
-    // Heart burst effect in lavender/pink shades
+    const colors = ["#af7be6", "#eba3cc", "#b87bc7"];
+
+    // Scatter bursts from left, right, and center
+    confetti({
+      particleCount: 60,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors,
+    });
+
+    confetti({
+      particleCount: 60,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors,
+    });
+
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ["#af7be6", "#eba3cc", "#b87bc7"], // lavender/pink tones
+      colors,
     });
 
-    // Navigate after short delay
-    setTimeout(() => router.push("/invite"), 600);
+    // Continuous stream for 2 seconds
+    const duration = 2000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+        colors,
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+        colors,
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+
+    // Navigate after stream ends
+    setTimeout(() => router.push("/invite"), duration + 500);
   };
 
   // Hearts + Glitters generated once
@@ -46,7 +89,7 @@ export default function Home() {
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         size: ["w-1.5 h-1.5", "w-2 h-2", "w-3 h-3", "w-4 h-4"][i % 4],
-        color: ["#af7be6", "#eba3cc", "#b87bc7"][i % 3], // lavender/pink tones
+        color: ["#af7be6", "#eba3cc", "#b87bc7"][i % 3],
       })),
     []
   );
